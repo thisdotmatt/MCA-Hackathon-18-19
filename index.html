@@ -420,24 +420,23 @@ var txt = 'Welcome To the Future.';
 var txt2 = 'Organization At Its Finest.';
 var speed = 50;
 
-function typeWriter() {
+window.onload = function typeWriter() {
   if (i < txt2.length) {
     document.getElementById("quote1").innerHTML += txt2.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
-  window.setTimeout(typeWrite, 3000);
 }
 		
-function typeWrite() {
+window.onload = typeWrite() {
   if (i < txt.length) {
     document.getElementById("quote2").innerHTML += txt.charAt(i);
     i++;
-    setTimeout(typeWriter, speed);
+    setTimeout(typeWrite, speed);
   }
 }
 </script>
-<body onload="typeWriter()">
+<body>
 </head>
     <header class="clearfix">
     <div class="container">
