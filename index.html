@@ -426,9 +426,10 @@ window.onload = function typeWriter() {
     i++;
     setTimeout(typeWriter, speed);
   }
+    setTimeout(typeWrite, 3000);
 }
 		
-window.onload = typeWrite() {
+function typeWrite() {
   if (i < txt.length) {
     document.getElementById("quote2").innerHTML += txt.charAt(i);
     i++;
