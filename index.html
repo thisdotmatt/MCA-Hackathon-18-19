@@ -22,9 +22,7 @@ html{
 }
 body{
     background: url('brushed_alu.png');
-  }
-  
-  
+}
 .clearfix:before,
 .clearfix:after {
   display: table;
@@ -88,7 +86,7 @@ header{
 #open{
     display: none;
 }
-.title1 {
+h1{
     font-weight: 300;
     line-height: 40px;
     font-family: Lucida Console;
@@ -96,12 +94,11 @@ header{
 a{
     text-decoration: none;
     color: white;
-    font-size: 20px;
 }
 nav>a{
     position: relative;
     display: inline-block;
-    font-size: 20px;
+    font-size: 13px;
     line-height: 40px;
     padding: 0 2em;
     -webkit-transition: all .3s ease;
@@ -113,7 +110,7 @@ nav>a:hover{
 .hidden-desktop{
     display: none;
 }
-.section {
+section{
     width: 100%;
     height: auto;
     background-image: -webkit-linear-gradient(#80059E 0%, #550486 100%);
@@ -163,24 +160,20 @@ nav>a:hover{
 .learn-more:active{
     box-shadow: inset 0 2px 0 rgba(0,0,0,.8);
 }
-
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
     .box{
         width: 49%;
         margin-bottom: 5%;
     }
-
     ul li:nth-child(3) .box{
         clear: both;
     }
-
     ul li:nth-child(2n) .box{
         margin-right: 0;
         clear: right;
     }
 }
-
 /* Small monitor */
 @media (max-width: 979px){
     nav>a{
@@ -304,70 +297,12 @@ nav>a:hover{
         display: block;
     }
 }
-  
-* {
-    box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-/* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 15px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-    .column {
-        width: 100%;
-    }
-}
-  
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.contactform {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
 </style>
 </head>
     <header class="clearfix">
     <div class="container">
             <div class="header-left">
-                <h1 class="title1">Studently</h1>
+                <h1>Studently</h1>
             </div>
             <div class="header-right">
                 <label for="open">
@@ -379,7 +314,7 @@ input[type=submit]:hover {
                     <a href="#">Learn</a>
                     <a href="#">About</a>
                     <a href="#">Contact</a>
-                    <a href="https://thisdotmatt.github.io/MCA-Hackathon-18-19/login.html">Login</a>
+                    <a href="#">Login</a>
                 </nav>
             </div>
         </div>
@@ -387,49 +322,12 @@ input[type=submit]:hover {
 <section class="clearfix">
         <div class="container">
             <div class="section-left">
-              <h1 class="section-title">Welcome To the Future of Learning.</h1>
+                <h1 class="section-title">Welcome To the Future.</h1>
+                <h2 class="section-tagline">Studently brings you the next generation of learning</h2>
             </div>
             <div class="section-right">
                 <button class="learn-more">Learn more</button>
             </div>
         </div>
     </section>
-<div class="row">
-  <div class="column side">
-    <h2>Side</h2>
-    <p>Random</p>
-  </div>
-  <div class="column middle">
-    <h2>Main Content</h2>
-    <p>Random Info</p>
-    <p>Random info</p>
-  </div>
-  <div class="column side">
-    <h2>Side</h2>
-    <p>Random....</p>
-  </div>
-</div>
-  
-<div class="contactform">
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Syria</option>
-      <option value="canada">Bahamas</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
-  
 </html>
