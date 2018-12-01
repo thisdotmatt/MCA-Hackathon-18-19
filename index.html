@@ -113,7 +113,7 @@ nav>a:hover{
 .hidden-desktop{
     display: none;
 }
-.clearfix {
+.section {
     width: 100%;
     height: auto;
     background-image: -webkit-linear-gradient(#80059E 0%, #550486 100%);
@@ -332,6 +332,36 @@ body {
         width: 100%;
     }
 }
+  
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.contactform {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 </style>
 </head>
     <header class="clearfix">
@@ -380,14 +410,26 @@ body {
   </div>
 </div>
   
-<section>
-  <div class="img1" align="left">
-    <img src="https://www.universityofcalifornia.edu/sites/default/files/ucop_calprep_UCOP-12.jpg" width="200" height="200"></img>
-  </div>
-   <div class="img2" align="right">
-    <img src="http://www.gettingsmart.com/wp-content/uploads/2014/09/student-desk-tablet-482x335.jpg" width="200" height="200"></img>
-  </div>
-</section>
-    
+<div class="contactform">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Syria</option>
+      <option value="canada">Bahamas</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
   
 </html>
