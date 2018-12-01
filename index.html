@@ -426,7 +426,6 @@ window.onload = function typeWriter() {
     i++;
     setTimeout(typeWriter, speed);
   }
-    setTimeout(typeWrite, 3000);
 }
 		
 function typeWrite() {
@@ -437,7 +436,7 @@ function typeWrite() {
   }
 }
 </script>
-<body>
+<body onload="typeWrite()">
 </head>
     <header class="clearfix">
     <div class="container">
