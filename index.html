@@ -414,7 +414,30 @@ h2 {
 }
 </style>
 </head>
-<body>
+	<script>
+var i = 0;
+var txt = 'Welcome To the Future.';
+var txt2 = 'Organization At Its Finest.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt2.length) {
+    document.getElementById("quote1").innerHTML += txt2.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+	window.setTimeout(typeWrite, 3000);
+		
+function typeWrite() {
+  if (i < txt.length) {
+    document.getElementById("quote2").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+<body onload="typeWriter()">
 </head>
     <header class="clearfix">
     <div class="container">
@@ -439,9 +462,9 @@ h2 {
 <section class="clearfix">
         <div class="container">
             <div class="section-left">
-                <h1 class="section-title">Welcome To the Future.</h1>
+                <h1 class="section-title" id="quote1"></h1>
 		    <br></br>
-		 <h1 class="section-title" style="text-indent: 50px">Organization At Its Finest.</h1>
+		 <h1 class="section-title" style="text-indent: 50px" id="quote2"></h1>
             </div>
         </div>
     </section>
