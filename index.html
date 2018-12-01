@@ -305,6 +305,34 @@ section{
     }
 }
   
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
 </style>
 </head>
     <header class="clearfix">
@@ -330,11 +358,26 @@ section{
 <section class="clearfix">
         <div class="container">
             <div class="section-left">
-              <h1 class="section-title">Welcome To the Future.</h1>
+              <h1 class="section-title">Welcome To the Future of Learning.</h1>
             </div>
             <div class="section-right">
                 <button class="learn-more">Learn more</button>
             </div>
         </div>
     </section>
+<div class="row">
+  <div class="column side">
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  </div>
+  <div class="column middle">
+    <h2>Main Content</h2>
+    <p>Random Info</p>
+    <p>Random info</p>
+  </div>
+  <div class="column side">
+    <h2>Side</h2>
+    <p>Random....</p>
+  </div>
+</div>
 </html>
