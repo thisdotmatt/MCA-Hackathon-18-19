@@ -1,20 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<style>
-			
-		</style>
-	</head>
-	<script>
-	
-	</script>
-	
-	<body>
-	
-	</body>
-	
-</html><!DOCTYPE html>
-<html>
 <head>
 <style>
 *{
@@ -344,6 +329,49 @@ h2 {
   font-color: 0xffff;
   font-size: 16px;
 }
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}	
+	
+	
+	
 </style>
 </head>
 <body>
@@ -381,17 +409,16 @@ h2 {
     <center><b><h2>Our Mission</h2></b></center>
     <center><img src="https://raw.githubusercontent.com/thisdotmatt/MCA-Hackathon-18-19/master/student-desk-tablet-482x335.jpg" alt="IMAGE" 
 		width="241" height="167"></center>
-    <center><p class="blacktext">Our website is designed to help students learn more. 
-		School doesn't know everything, as they only follow their necessary 
-		cirrculums. </p></center>
   </div>
   <div class="column" style="background-color:#bbb;">
     <center><b><h2>Your Journey</h2></b></center>
 	<center><img src="https://raw.githubusercontent.com/thisdotmatt/MCA-Hackathon-18-19/master/sre%C4%87ni-%C5%A1to-u%C4%8De.jpg" alt="IMAGE"
 		width="250" height="167"></center>
-	<center><p class="blacktext">The objective is not to help us, but to help YOU! We hope that you
-		will have the best experience here!</p></center>
   </div>
 </div>
+	<button class="button" style="vertical-align:left"><span>Hover </span></button>
+	<button class="button" style="vertical-align:middle"><span>Hover </span></button>
+	<button class="button" style="vertical-align:right"><span>Hover </span></button>
+	
   </body>
 </html>
