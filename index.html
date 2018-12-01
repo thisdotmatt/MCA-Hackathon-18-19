@@ -416,8 +416,9 @@ h2 {
 </head>
 	<script>
 var i = 0;
-var txt = 'Welcome To the Future.';
-var txt2 = 'Organization At Its Finest.';
+var txt = 'Welcome To the Future. 
+
+Organization At Its Finest.';
 var speed = 50;
 
 window.onload = function typeWriter() {
@@ -427,16 +428,9 @@ window.onload = function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
-		
-function typeWrite() {
-  if (i < txt.length) {
-    document.getElementById("quote2").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWrite, speed);
-  }
-}
+
 </script>
-<body onload="typeWrite()">
+<body>
 </head>
     <header class="clearfix">
     <div class="container">
