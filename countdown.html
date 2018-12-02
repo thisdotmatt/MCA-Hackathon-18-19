@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center><h1>STILL IN PROGRESS</h1></center>
+
+<p>Enter time you want to finish, first box is hours, second box is minutes, & third box is seconds</p>
+<p>(// represents new input box) - Example: For a timer for an assignment due 3:30, type 15//30//00 </p>
+
+<input id="numb">
+<input id="numb2">
+<input id="numb3">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x, var y, var z, text;
+
+    x = document.getElementById("numb").value;
+    y = document.getElementById("numb2").value;
+    z = document.getElementById("numb3").value;
+
+// Set the date we're counting down to
+var countDownDate = new Date("December, 2018 x:y:z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
